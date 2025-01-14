@@ -19,13 +19,13 @@ export default plugin(({ addComponents, theme }) => {
 
   addComponents({
     '.ale-focus': {
-      [`@apply outline-${config.width} outline-${config.style} outline-offset-${config.offset}`]:
+      [`@apply outline-${config.width} outline outline-offset-${config.offset}`]:
         {},
       '@apply outline-transparent': {},
       [mode]: {
         [`@apply outline-${config.color.light} dark:outline-${config.color.dark}`]:
           {},
-        [`@apply outline-${config.style} ring-0`]: {},
+        [`@apply outline ring-0`]: {},
       },
     },
   })
