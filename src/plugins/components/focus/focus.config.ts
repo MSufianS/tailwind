@@ -3,7 +3,7 @@ export const key = 'focus' as const
 export const defaultConfig = {
   offset: '2',
   width: '2',
-  style: 'dashed',
+  style: 'solid',
   color: {
     light: 'muted-300',
     dark: 'muted-600',
