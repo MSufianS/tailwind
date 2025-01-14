@@ -1,0 +1,127 @@
+{
+  "name": "@msufians/tailwind",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "MSufian",
+  "repository": "MSufianS/tailwind",
+  "bugs": "https://github.com/MSufianS/tailwind/issues",
+  "homepage": "https://github.com/MSufianS/tailwind",
+  "keywords": [
+    "ui",
+    "framework",
+    "library",
+    "components",
+    "tailwind",
+    "tailwindcss",
+    "design-system",
+    "module"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./preset": {
+      "types": "./dist/preset.d.ts",
+      "import": "./dist/preset.mjs",
+      "require": "./dist/preset.cjs"
+    },
+    "./config": {
+      "types": "./dist/config.d.ts",
+      "import": "./dist/config.mjs",
+      "require": "./dist/config.cjs"
+    },
+    "./colors": {
+      "types": "./dist/colors.d.ts",
+      "import": "./dist/colors.mjs",
+      "require": "./dist/colors.cjs"
+    },
+    "./themes": {
+      "types": "./dist/themes.d.ts",
+      "import": "./dist/themes.mjs",
+      "require": "./dist/themes.cjs"
+    },
+    "./plugins": {
+      "types": "./dist/plugins/index.d.ts",
+      "import": "./dist/plugins/index.mjs",
+      "require": "./dist/plugins/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "storybook dev -p 6006",
+    "build": "unbuild",
+    "build-storybook": "storybook build",
+    "lint": "run-s lint:eslint:fix lint:prettier:fix",
+    "lint:prettier": "prettier --check \"./**/*.(ts|css|scss|md)\"",
+    "lint:prettier:fix": "prettier --write \"./**/*.(ts|css|scss|md)\"",
+    "lint:eslint": "eslint -c .eslintrc.cjs --ext .ts .",
+    "lint:eslint:fix": "eslint -c .eslintrc.cjs --fix  --ext .ts .",
+    "test": "run-s lint:eslint lint:prettier test:vitest",
+    "test:vitest": "vitest",
+    "coverage": "vitest run --coverage",
+    "prepack": "pnpm run build",
+    "release": "run-s test release:*",
+    "release:standard-version": "standard-version",
+    "release:publish": "git push --follow-tags origin main && npm publish",
+    "prepare": "simple-git-hooks"
+  },
+  "dependencies": {
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@tailwindcss/typography": "^0.5.16",
+    "defu": "^6.1.4",
+    "tailwindcss": "^3.4.17"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18.6.1",
+    "@commitlint/config-conventional": "^18.6.3",
+    "@open-wc/lit-helpers": "0.6.0",
+    "@storybook/addon-essentials": "^8.4.7",
+    "@storybook/addon-links": "^8.4.7",
+    "@storybook/addon-themes": "^8.4.7",
+    "@storybook/blocks": "^8.4.7",
+    "@storybook/web-components": "^8.4.7",
+    "@storybook/web-components-vite": "^8.4.7",
+    "@types/node": "20.11.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@vitest/coverage-v8": "^2.1.8",
+    "@vitest/ui": "^2.1.8",
+    "autoprefixer": "^10.4.20",
+    "chromatic": "^10.9.6",
+    "commitlint": "^18.6.1",
+    "eslint": "8.56.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-storybook": "^0.8.0",
+    "eslint-plugin-tailwindcss": "3.13.1",
+    "eslint-plugin-unicorn": "^50.0.1",
+    "jsdom": "^23.2.0",
+    "lint-staged": "^15.3.0",
+    "lit": "^3.2.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.5.1",
+    "prettier": "^3.4.2",
+    "simple-git-hooks": "^2.11.1",
+    "standard-version": "^9.5.0",
+    "storybook": "^8.4.7",
+    "typescript": "^5.7.3",
+    "unbuild": "^2.0.0",
+    "vitest": "^2.1.8",
+    "vitest-axe": "0.1.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged",
+    "commit-msg": "pnpm commitlint -e -V "
+  },
+  "lint-staged": {
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write",
+      "eslint -c .eslintrc.cjs --fix --ext .ts"
+    ]
+  }
+}
