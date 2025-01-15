@@ -1,5 +1,5 @@
 import { axe } from 'vitest-axe'
-import { expect, test, describe } from 'vitest'
+// import { expect, test, describe } from 'vitest'
 import { render, html } from 'lit'
 
 import { Avatar } from './avatar.component'

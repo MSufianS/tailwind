@@ -25,18 +25,22 @@ export const AvatarGroup = ({
       )}
       ${spread(attrs)}
     >
-      ${avatars.map(
-        (avatar) => html`
-          <div class="ale-avatar-outer">
-            ${Avatar({
-              rounded: 'full',
-              size: size,
-              src: avatar.src,
-              'data-ale-tooltip': avatar.text,
-            })}
-          </div>
-        `,
-      )}
+      ${avatars.length > 0
+        ? avatars.map(
+            (avatar) => html`
+              <div class="ale-avatar-outer">
+                ${Avatar({
+                  rounded: 'full',
+                  size: size,
+                  src: avatar.src,
+                  'data-ale-tooltip': avatar.text,
+                })}
+              </div>
+            `,
+          )
+        : html`
+            <span>None</span>
+          `}
       ${avatars.length > limit
         ? html`
             <div class="ale-avatar-count">

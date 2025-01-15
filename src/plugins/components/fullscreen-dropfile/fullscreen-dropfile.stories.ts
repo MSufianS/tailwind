@@ -29,6 +29,7 @@ export const Main: Story = {
   args: {
     // set default values used for UI preview
     isDropping: true,
+    // @ts-ignore
     icon: html`
       <svg
         class="ale-fullscreen-dropfile-icon"

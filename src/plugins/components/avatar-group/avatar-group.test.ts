@@ -1,5 +1,5 @@
 import { axe } from 'vitest-axe'
-import { expect, test, describe } from 'vitest'
+// import { expect, test, describe } from 'vitest'
 import { render, html } from 'lit'
 
 import { AvatarGroup } from './avatar-group.component'
@@ -15,7 +15,7 @@ describe('AvatarGroup', () => {
 
     expect(
       document.body.querySelector('.ale-avatar-group')?.outerHTML,
-    )?.toContain('Hello world')
+    )?.toContain('None')
   })
 
   test('Should have no axe violations', async () => {

@@ -3,7 +3,7 @@ export const key = 'button' as const
 export const defaultConfig = {
   font: {
     family: 'sans',
-    weight: 'normal',
+    weight: 'semibold',
   },
   transition: {
     property: 'all',
@@ -26,7 +26,7 @@ export const defaultConfig = {
     md: {
       button: {
         text: 'sm',
-        height: '10',
+        height: '9',
         padding: {
           x: '5',
           y: '2',

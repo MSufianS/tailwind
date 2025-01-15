@@ -48,7 +48,10 @@ const meta = {
       defaultValue: 4,
     },
     avatars: {
-      control: { type: 'array' },
+      control: {
+        // @ts-ignore
+        type: 'array',
+      },
       defaultValue: demoAvatars,
     },
   },

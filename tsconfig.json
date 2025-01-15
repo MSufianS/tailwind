@@ -9,7 +9,8 @@
     "paths": {
       "~/types": ["types"],
       "~/types/*": ["types/*"],
-    }
+    },
+    "types": ["vitest/globals"]
   },
   
   "include": [

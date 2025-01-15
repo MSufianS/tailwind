@@ -24,7 +24,7 @@ export default plugin(({ addComponents, theme }) => {
         [`@apply bg-${config.drop.background.light} dark:bg-${config.drop.background.dark}`]:
           {},
         //Border
-        [`@apply border-2 border-dashed border-${config.drop.border.base.light} dark:border-${config.drop.border.base.light}`]:
+        [`@apply border-2 border border-${config.drop.border.base.light} dark:border-${config.drop.border.base.light}`]:
           {},
         //Border:hover
         [`@apply hover:border-${config.drop.border.hover.light} dark:hover:border-${config.drop.border.hover.dark}`]:
