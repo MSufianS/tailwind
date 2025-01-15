@@ -60,16 +60,16 @@ export const defaultConfig = {
     warning: {
       font: {
         color: {
-          light: 'info-500',
-          dark: 'info-500',
+          light: 'warning-500',
+          dark: 'warning-500',
         },
       },
     },
     danger: {
       font: {
         color: {
-          light: 'info-500',
-          dark: 'info-500',
+          light: 'danger-500',
+          dark: 'danger-500',
         },
       },
     },
