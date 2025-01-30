@@ -13,7 +13,7 @@ export const defaultTheme = {
   },
   extend: {
     colors: {
-      primary: colors.violet,
+      primary: colors.emerald,
       'primary-invert': colors.white,
       muted: colors.slate,
       info: colors.sky,
