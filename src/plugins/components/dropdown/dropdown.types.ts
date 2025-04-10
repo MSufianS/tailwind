@@ -29,7 +29,7 @@ export interface DropdownProps extends Record<string, unknown> {
     | 'none'
   rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full'
   orientation?: 'start' | 'end'
-  size?: 'md' | 'lg'
+  size?: 'sm' | 'md' | 'lg'
   label?: string
   headerLabel?: string
   open?: boolean

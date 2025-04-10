@@ -26,7 +26,7 @@ export const defaultConfig = {
     md: {
       button: {
         text: 'sm',
-        height: '9',
+        height: '10',
         padding: {
           x: '5',
           y: '2',

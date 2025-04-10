@@ -127,6 +127,10 @@ export default plugin(({ addComponents, theme }) => {
       '.ale-menu-content': {
         '@apply p-2 space-y-1': {},
       },
+      //Size:sm
+      '&.ale-menu-sm': {
+        '@apply w-40': {},
+      },
       //Size:md
       '&.ale-menu-md': {
         '@apply w-56': {},

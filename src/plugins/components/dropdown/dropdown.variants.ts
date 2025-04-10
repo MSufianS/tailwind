@@ -6,6 +6,7 @@ export const orientation = {
 } as const satisfies DropdownVariant<'orientation'>
 
 export const size = {
+  sm: 'ale-menu-sm',
   md: 'ale-menu-md',
   lg: 'ale-menu-lg',
 } as const satisfies DropdownVariant<'size'>

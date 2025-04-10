@@ -10,7 +10,7 @@ export const defaultConfig = {
   },
   background: {
     light: '[#1e293b]',
-    dark: '[#4c1d95]',
+    dark: '[#14b8a6]',
   },
   size: {
     width: {
